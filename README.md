@@ -118,12 +118,12 @@ sudo systemctl restart docker
 
    <img src="assets/QQ_1721620847008.png" alt="QQ_1721620847008" />
 
-5. 此时便可以将Docker镜像源地址设置为你的镜像源地址
+5. 此时便可以将Docker镜像源地址设置为你的镜像源地址。*将`https://xxx.dev`替换为你的镜像源地址*
 
    ```json
    {
        "registry-mirrors": [
-           "https://xxx.dev" # 替换为你的镜像源地址
+           "https://xxx.dev"
        ]
    }
    ```
