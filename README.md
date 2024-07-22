@@ -90,11 +90,42 @@ sudo systemctl restart docker
 
 
 
-国内第三方镜像源几乎失效，可自行配置代理官方镜像地址
+## 自建镜像源
 
-一些解决方法：
+1. 前往GitHub Fork该仓库
 
-[cmliu/CF-Workers-docker.io: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。 (github.com)](https://github.com/cmliu/CF-Workers-docker.io)
+   https://github.com/cmliu/CF-Workers-docker.io
 
-[24年6月国内Docker镜像源失效解决办法--小白也可以自给自足（镜像仓库搭建）含可用Docker镜像源 - 掘金 (juejin.cn)](https://juejin.cn/post/7385374199914938406)
+   <img src="assets/QQ_1721619378153.png" alt="QQ_1721619378153" />
 
+   Fork之后会在自己的仓库中
+
+   <img src="assets/QQ_1721619568737.png" alt="QQ_1721619568737" />
+
+   ![QQ_1721619675209](assets/QQ_1721619675209.png)
+
+2. 打开Cloudflare界面，登录后，进入`Workers 和 Pages`界面，创建应用程序，选择Pages、连接到GIt，之后关联Git账号
+
+   https://www.cloudflare.com/zh-cn/
+
+   <img src="assets/QQ_1721620088948.png" alt="QQ_1721620088948" />
+
+3. 登录Git账号后，选择刚才GitHub上fork的项目，可以修改项目名称方便记忆
+
+   <img src="assets/QQ_1721620698773.png" alt="QQ_1721620698773" />
+
+4. 点击`保存并部署`后，等待出现这个界面表示部署完成，红框内就是你的镜像源地址，如果你有域名，可以在`自定义域`中设置，此处不做赘述
+
+   <img src="assets/QQ_1721620847008.png" alt="QQ_1721620847008" />
+
+5. 此时便可以将Docker镜像源地址设置为你的镜像源地址
+
+   ```json
+   {
+       "registry-mirrors": [
+           "https://xxx.dev" # 替换为你的镜像源地址
+       ]
+   }
+   ```
+
+   
