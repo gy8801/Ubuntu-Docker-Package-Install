@@ -6,6 +6,8 @@
 
 - [Ubuntu18.04 Docker安装包](https://github.com/gy8801/DockerPackage---1804)
 - [Ubuntu20.04 Docker安装包](https://github.com/gy8801/DockerPackage---2004)
+- [Ubuntu22.04 Docker安装包](https://github.com/gy8801/DockerPackage---2204)
+- [Ubuntu24.04 Docker安装包 ](https://github.com/gy8801/DockerPackage---2404)
 
 
 
